@@ -654,7 +654,10 @@
                     width: 100%;
                     height: 310px;
                     transform-style: preserve-3d;
+                    -webkit-transform-style: preserver-3d;
                     transition: transform 0.8s ease;
+                    -webkit-transition: -webkit-transform 0.8s ease;
+                    will-change: transform;
                 }
                 .historia-tarjeta input {
                     position: absolute;
@@ -665,17 +668,33 @@
                 .historia-tarjeta input:checked
                 ~ .historia-interior {
                     transform: rotateY(180deg);
+                    -webkit-transform: rotateY(180deg);
                 }
                 .historia-frente,
                 .historia-reverso {
-                    position: absolute;
-                    inset: 0;
-                    overflow: hidden;
-                    border-radius: 22px;
-                    backface-visibility: hidden;
-                    -webkit-backface-visibility: hidden;
-                    box-shadow: 0 8px 22px rgba(128, 52, 83, 0.18);
-                }
+                   position: absolute;
+    inset: 0;
+    overflow: hidden;
+    border-radius: 22px;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+
+    box-shadow: 0 8px 22px rgba(128, 52, 83, 0.18);
+}
+
+.historia-frente {
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+}
+
+.historia-reverso {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
                 .historia-frente img {
                     display: block;
                     width: 100%;
@@ -784,7 +803,7 @@
 
         </div>
         
-        <p class="inicio-pie">pequeño rincón hecho con cariño para ti</p>
+        <p class="inicio-pie">Un pequeño rincón hecho con cariño para ti..</p>
 
         <span class="inicio-corazon" 
         aria-hidden="true">
@@ -875,7 +894,7 @@
         </div>
 
         <p class="historia-ayuda">
-            Toca cada fotografia paradescubrir el recuerdo &#9825;
+            Toca cada fotografia para descubrir el recuerdo &#9825;
         </p>
 
         <div class="historia-botones">
@@ -909,7 +928,7 @@
         <p>Espero que este año de vida llegue cargado de cosas buenas para tí, que puedas cumplir tus sueños, alcanzar cada una de tus metas y que nunca te falten las fuerzas para seguir adelante para aquello que deseas.</p>
         <p>Que incluso en los días más difíciles encuentres motivos para sonreír, nunca dejes de creer en tí, deja que la vida te sorprenda con esas cosas bonitas que aveces llegan cuando menos las esperamos.</p>
         <p>Te mereces un cumpleaños muy bonito, un año de nuevas experiencias, aprendizajes y momentos felices.</p>
-        <p>Disfruta mucho tu día,recibe muchos abrazos y dejate consentir bastante JaJa</p>
+        <p>Disfruta mucho tu día, recibe muchos abrazos y dejate consentir bastante JaJa</p>
         <p>¡¡Que hoy y siempre tengas muchos motivos para ser Feliz!!</p>
         <p><strong><em>¡¡Feliz Cumpleaños!!</em></strong></p>
         </div>
